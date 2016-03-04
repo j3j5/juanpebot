@@ -135,7 +135,7 @@ controller.hears(['fiesta', 'party', 'cerveza', 'pelotazo', ], 'direct_message,d
     bot.reply(message,'Eiihhh se anima esto!');
 });
 
-controller.hears(['meme', 'giphy', 'gif', 'bot', ], 'direct_message,direct_mention,ambient', function(bot, message){
+controller.hears(['meme', 'giphy', 'gif', ], 'direct_message,direct_mention,ambient', function(bot, message){
     bot.reply(message,'Esto no pasaría en skype');
 });
 
