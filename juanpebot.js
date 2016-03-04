@@ -140,6 +140,8 @@ controller.hears(['meme', 'giphy', 'gif', ], 'direct_message,direct_mention,ambi
 });
 
 controller.hears(['chiste', 'gracia', 'me parto', 'risa', ], 'direct_message,direct_mention,ambient', function(bot, message){
-    bot.reply(message,'jajaja');
+    setTimeout(function(){ 
+        bot.reply(message,'jajaja');
+    }, 1000);
 });
 
