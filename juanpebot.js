@@ -145,3 +145,15 @@ controller.hears(['chiste', 'gracia', 'me parto', 'risa', ], 'direct_message,dir
     }, 1000);
 });
 
+controller.hears(['nazi', '[A|a]dolf', '[H|h]itler'], 'ambient', function(bot, message){
+    bot.api.reactions.add({
+        timestamp: message.ts,
+        channel: message.channel,
+        name: 'digital-nazi',
+    },function(err, res) {
+        if (err) {
+            bot.botkit.log('Failed to add emoji reaction :(',err);
+        }
+    });
+});
+
