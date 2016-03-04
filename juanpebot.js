@@ -157,3 +157,15 @@ controller.hears(['nazi', '[A|a]dolf', '[H|h]itler'], 'ambient', function(bot, m
     });
 });
 
+controller.hears(['momi'], 'ambient', function(bot, message){
+    bot.api.reactions.add({
+        timestamp: message.ts,
+        channel: message.channel,
+        name: 'juanpe',
+    },function(err, res) {
+        if (err) {
+            bot.botkit.log('Failed to add emoji reaction :(',err);
+        }
+    });
+});
+
